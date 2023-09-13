@@ -1,0 +1,33 @@
+nav  {
+  display: flex;
+  background: #000080;
+}
+
+input[name="tab_item"] {
+  display: none;
+}
+
+nav label{
+  user-select: none;
+  width: 150px;
+  list-style: none;
+  text-align: center;
+  color: white;
+  border-right: 1px solid white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+nav  input:checked + label{
+ opacity: 1.0;
+}
+
+main div.tab_content {
+  display: none;
+}
+
+nav:has(>#wbaBt:checked)  + main >#wbaDisp,
+nav:has(>#wbbBt:checked)  + main >#wbbDisp,
+nav:has(>#wbcBt:checked)  + main >#wbcDisp {
+  display:block;
+}
